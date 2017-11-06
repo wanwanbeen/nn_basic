@@ -1,6 +1,6 @@
 # cnn_3d_classification
 
-This repository contains the code for the classification of large-sized 3D regions with 3D CNN.
+This repository contains the codes for the classification of large-sized 3D regions with 3D CNN.
 
 ## Files
 
