@@ -20,8 +20,8 @@ load_data_flag = True
 # Predefined directories
 ####################################################################
 
-dir_class1  = '../sample_fl/'
-dir_class2  = '../sample_cac/'
+dir_class1  = '../sample_class1/'
+dir_class2  = '../sample_class2/'
 dir_all     = '../sample_all/'
 
 img_suffix  = '.nii.gz' # suffix for 3D data
