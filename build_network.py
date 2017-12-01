@@ -30,7 +30,7 @@ def get_network(img_size, depth_level):
                           kernel_regularizer=l2(0.00))(inputs)
     conv1 = Convolution3D(first_channel_num, (3, 3, 3), activation=None, padding = 'same',
                           kernel_regularizer=l2(0.00))(conv1)
-    bn1 = BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
+    bn1 = BatchNormalization(axis=1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
                        gamma_initializer='ones', moving_mean_initializer='zeros', moving_variance_initializer='ones',
                        beta_regularizer=None, gamma_regularizer=None, beta_constraint=None, gamma_constraint=None)(conv1)
     relu1 = Activation('relu')(bn1)
@@ -40,7 +40,7 @@ def get_network(img_size, depth_level):
                           kernel_regularizer=l2(0.00))(pool1)
     conv2 = Convolution3D(first_channel_num*2, (3, 3, 3), activation=None, padding = 'same',
                           kernel_regularizer=l2(0.00))(conv2)
-    bn2 = BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
+    bn2 = BatchNormalization(axis=1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
                              gamma_initializer='ones', moving_mean_initializer='zeros',
                              moving_variance_initializer='ones',
                              beta_regularizer=None, gamma_regularizer=None, beta_constraint=None,
@@ -52,7 +52,7 @@ def get_network(img_size, depth_level):
                           kernel_regularizer=l2(0.00))(pool2)
     conv3 = Convolution3D(first_channel_num * 4, (3, 3, 3), activation=None, padding='same',
                           kernel_regularizer=l2(0.00))(conv3)
-    bn3 = BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
+    bn3 = BatchNormalization(axis=1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
                              gamma_initializer='ones', moving_mean_initializer='zeros',
                              moving_variance_initializer='ones',
                              beta_regularizer=None, gamma_regularizer=None, beta_constraint=None,
@@ -64,7 +64,7 @@ def get_network(img_size, depth_level):
                           kernel_regularizer=l2(0.00))(pool3)
     conv4 = Convolution3D(first_channel_num * 8, (3, 3, 3), activation=None, padding='same',
                           kernel_regularizer=l2(0.00))(conv4)
-    bn4 = BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
+    bn4 = BatchNormalization(axis=1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
                              gamma_initializer='ones', moving_mean_initializer='zeros',
                              moving_variance_initializer='ones',
                              beta_regularizer=None, gamma_regularizer=None, beta_constraint=None,
@@ -76,7 +76,7 @@ def get_network(img_size, depth_level):
                           kernel_regularizer=l2(0.00))(pool4)
     conv5 = Convolution3D(first_channel_num * 16, (3, 3, 3), activation=None, padding='same',
                           kernel_regularizer=l2(0.00))(conv5)
-    bn5 = BatchNormalization(axis=-1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
+    bn5 = BatchNormalization(axis=1, momentum=0.99, epsilon=0.001, center=True, scale=True, beta_initializer='zeros',
                              gamma_initializer='ones', moving_mean_initializer='zeros',
                              moving_variance_initializer='ones',
                              beta_regularizer=None, gamma_regularizer=None, beta_constraint=None,
