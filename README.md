@@ -10,9 +10,8 @@ This repository contains the codes for the classification of large-sized 3D regi
 
 ## Requirements
 
-* Keras
-* numpy
-* nibabel
+* Keras (with TensorFlow backend)
+* nibabel (inteface to nifti files)
 * scikit-learn
 
 ## Usage
